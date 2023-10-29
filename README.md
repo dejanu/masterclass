@@ -31,10 +31,14 @@ docker stats [OPTIONS] [CONTAINER...]
 docker build -t test https://github.com/dejanu/sretoolkit.git#container:docker --no-cache
 
 # inspect image
+docker inspect -f '{{.Config.Cmd}}' test
+docker inspect -f '{{.Config.Entrypoint}}' test
 
 # working with air-gapped environments
 cd airgapped
+docker pull nginx:latest
 docker save nginx:latest | gzip > nginx.tar.gz
+docker delete nginx:latest
 docker load -i nginx.tar.gz
 docker run --name agnginx -p 8080:80 nginx:latest
 ```
