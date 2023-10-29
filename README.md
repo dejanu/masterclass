@@ -27,6 +27,18 @@ docker stats [OPTIONS] [CONTAINER...]
 
 * Docker building and shipping images
 ```bash
-# build from remote git repo (disable buildkit)
+# build from cowsay remote git repo (disable buildkit)
 docker build -t test https://github.com/dejanu/sretoolkit.git#container:docker --no-cache
+
+# inspect image
+
+# working with air-gapped environments
+cd airgapped
+docker save nginx:latest | gzip > nginx.tar.gz
+docker load -i nginx.tar.gz
+docker run --name agnginx -p 8080:80 nginx:latest
 ```
+
+## Other repos
+
+* CaaS [here](https://github.com/dejanu/CaaS)
