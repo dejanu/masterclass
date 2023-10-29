@@ -52,9 +52,16 @@ docker run --name agnginx -p 8080:80 nginx:latest
 * An image is a combination of a JSON manifest and individual layer files
 * Images are stored in collections, known as a **repository**
 * A **registry** instance may contain several repositories
-* A [registry](https://hub.docker.com/) is a storage and content delivery system, holding named Docker images, available in different tagged versions. 
+* A [registry](https://docs.docker.com/registry/) e.g. [Dockerhub](https://hub.docker.com/) is a storage and content delivery system, holding named Docker images, available in different tagged versions. 
+
+## Dockerfile
+
+* `Dockerfile` contains instructions that are used to build Docker images, reference [here](https://docs.docker.com/engine/reference/builder/)
+
+* Try a linter like [hadolint](https://github.com/hadolint/hadolint) if you don't like manual stuff
 
 
-## Other repos
+## Links and repositories
 
-* CaaS [here](https://github.com/dejanu/CaaS)
+* CaaS for boilerplate [here](https://github.com/dejanu/CaaS)
+* Dockerhub [here](https://hub.docker.com/)
