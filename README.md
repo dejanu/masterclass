@@ -16,6 +16,7 @@ __In the “Container to Pod: From Zero to Hero” masterclass, you’ll dive he
 * Docker engine
 ```bash
 # check the container runtime
+docker system info --format "{{ .Runtimes }}"
 docker system info --format "{{ .DefaultRuntime }}"
 
 # check root directory for Docker storage, defaults to /var/lib/docker
@@ -26,6 +27,11 @@ docker stats [OPTIONS] [CONTAINER...]
 ```
 
 * Docker building and shipping images
+
+    - Container = segregated user-space environments for running applications isolated from other applications sharing the same host OS.
+
+    - Image = read-only templates that contain a runtime environment that includes application libraries and applications.
+
 ```bash
 # build from cowsay remote git repo (disable buildkit)
 docker build -t test https://github.com/dejanu/sretoolkit.git#container:docker --no-cache
@@ -42,6 +48,12 @@ docker delete nginx:latest
 docker load -i nginx.tar.gz
 docker run --name agnginx -p 8080:80 nginx:latest
 ```
+
+* An image is a combination of a JSON manifest and individual layer files
+* Images are stored in collections, known as a **repository**
+* A **registry** instance may contain several repositories
+* A [registry](https://hub.docker.com/) is a storage and content delivery system, holding named Docker images, available in different tagged versions. 
+
 
 ## Other repos
 
