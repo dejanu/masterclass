@@ -64,4 +64,4 @@ docker run --name agnginx -p 8080:80 nginx:latest
 ## Links and repositories
 
 * CaaS for boilerplate [here](https://github.com/dejanu/CaaS)
-* Dockerhub [here](https://hub.docker.com/)
+* Dockerhub [here](https://hub.docker.com/u/dejanualex)
