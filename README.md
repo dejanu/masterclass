@@ -9,7 +9,7 @@ __In the “Container to Pod: From Zero to Hero” masterclass, you’ll dive he
 
 * 2017: Docker [donated](https://thenewstack.io/docker-donate-container-runtime-containerd-cloud-native-computing-foundation/) its core container runtime [containerd](https://github.com/containerd/containerd) to CNCF
 
-* From container to pod — [demystifying container runtimes](https://medium.com/faun/from-container-to-pod-demystifying-container-runtimes-a3fd03ee0601)
+* From container to pod — [demystifying container runtimes](https://medium.com/faun/from-container-to-pod-demystifying-container-runtimes-a3fd03ee0601) and [the dirty secretes of containers](https://medium.com/faun/the-dirty-secrets-of-containers-1af11bd15e9d)
 
 ## Docker 101
 
@@ -40,6 +40,9 @@ docker build -t test https://github.com/dejanu/sretoolkit.git#container:docker -
 docker inspect -f '{{.Config.Cmd}}' test
 docker inspect -f '{{.Config.Entrypoint}}' test
 
+# view cmds to layers
+docker image history test
+
 # working with air-gapped environments
 cd airgapped
 docker pull nginx:latest
@@ -58,7 +61,7 @@ docker run --name agnginx -p 8080:80 nginx:latest
 
 * `Dockerfile` contains instructions that are used to build Docker images, reference [here](https://docs.docker.com/engine/reference/builder/)
 
-* Try a linter like [hadolint](https://github.com/hadolint/hadolint) if you don't like manual stuff
+* Try a linter like [hadolint](https://github.com/hadolint/hadolint) if you don't like manual stuff: `docker run --rm -i hadolint/hadolint < Dockerfile`
 
 
 ## Links and repositories
