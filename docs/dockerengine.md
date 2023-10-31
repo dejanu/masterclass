@@ -1,3 +1,6 @@
+## Docker Engine
+
+```bash
 # containers resource usage
 docker stats [OPTIONS] [CONTAINER...]
 docker stats --no-stream
@@ -34,3 +37,4 @@ journalctl -u docker
 # get events
 docker events --filter event=restart --since=60m
 docker events --filter event=restart --since=60m > events.log 2>&1
+```
