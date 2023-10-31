@@ -7,6 +7,7 @@ mkdir -p $chr/{bin,lib,lib64}
 # select the desired bins
 which bash
 which ls
+
 cp -v /usr/bin/bash $chr/bin
 cp -v /usr/bin/ls $chr/bin
 
