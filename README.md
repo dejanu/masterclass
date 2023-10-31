@@ -13,7 +13,7 @@ __In the “Container to Pod: From Zero to Hero” masterclass, you’ll dive he
 
 ## Docker 101
 
-* Docker engine
+* Docker engine [here](https://github.com/dejanu/masterclass/blob/main/docs/dockerengine.md)
 ```bash
 # check the container runtime
 docker system info --format "{{ .Runtimes }}"
@@ -62,7 +62,14 @@ docker run --rm -p 8080:8080 myapp
 * A **registry** instance may contain several repositories
 * A [registry](https://docs.docker.com/registry/) e.g. [Dockerhub](https://hub.docker.com/) is a storage and content delivery system, holding named Docker images, available in different tagged versions.
 
+````bash
+docker run -d -p 5000:5000 --name registry registry:2
+docker image tag alpine:latest localhost:5000/demoalpine
+docker push localhost:5000/demoalpine
 
+# retag and push image and just check from browser ;)
+http://127.0.0.1:5000/v2/_catalog
+```
 
 ## Dockerfile
 
