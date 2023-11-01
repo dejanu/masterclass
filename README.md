@@ -33,6 +33,8 @@ docker stats [OPTIONS] [CONTAINER...]
 
     - Image = read-only templates that contain a runtime environment that includes application libraries and applications.
 
+* build context is the set of files that your build can access
+
 ```bash
 # build from cowsay remote git repo (disable buildkit)
 docker build -t test https://github.com/dejanu/masterclass.git#cowsay:dockersay --no-cache
@@ -40,6 +42,9 @@ docker build -t test https://github.com/dejanu/masterclass.git#cowsay:dockersay 
 # inspect image
 docker inspect -f '{{.Config.Cmd}}' test
 docker inspect -f '{{.Config.Entrypoint}}' test
+
+# build dockerwhale image
+docker build -t dejanualex/dockersay:1.0 -f dockersay/cowDockerfile .
 
 # view cmds to layers
 docker image history test
@@ -59,6 +64,8 @@ docker run --rm -p 8080:8080 myapp
 ```
 * An image is a combination of a JSON manifest and individual layer files
 * Images are stored in collections, known as a **repository** check ARM [here](https://github.com/dmikusa/paketo-arm64)
+
+---
 
 * A **registry** instance may contain several repositories
 * A [registry](https://docs.docker.com/registry/) e.g. [Dockerhub](https://hub.docker.com/) is a storage and content delivery system, holding named Docker images, available in different tagged versions.
