@@ -34,7 +34,7 @@ docker stats [OPTIONS] [CONTAINER...]
 
 ```bash
 # build from cowsay remote git repo (disable buildkit)
-docker build -t test https://github.com/dejanu/sretoolkit.git#container:docker --no-cache
+docker build -t test https://github.com/dejanu/masterclass.git#cowsay:dockersay --no-cache
 
 # inspect image
 docker inspect -f '{{.Config.Cmd}}' test
