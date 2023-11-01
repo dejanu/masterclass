@@ -25,6 +25,7 @@ docker info -f '{{ .DockerRootDir}}'
 # containers resource usage
 docker stats [OPTIONS] [CONTAINER...]
 ```
+---
 
 * Docker building and shipping images
 
