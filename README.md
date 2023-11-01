@@ -57,7 +57,7 @@ docker rmi nginx:alpine3.18-slim
 docker load -i nginx.tar.gz
 docker run --rm --name localginx -p 8080:80 nginx:alpine3.18-slim
 ```
-* Build an application using buildpacks: transforming your source code into a runnable app image.
+* Build an application using [buildpacks](https://buildpacks.io/): transforming your source code into a runnable app image
 ```bash
 pack build myapp --builder cnbs/sample-builder:jammy
 docker run --rm -p 8080:8080 myapp
