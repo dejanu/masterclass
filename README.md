@@ -13,7 +13,7 @@ __In the “Container to Pod: From Zero to Hero” masterclass, you’ll dive he
 
 ## Docker 101
 
-* Docker engine [here](https://github.com/dejanu/masterclass/blob/main/docs/dockerengine.md)
+* Docker engine [here](https://gist.github.com/dejanu/b4e15c76851502660ec1d43d3018b9c0#file-docker_engine-sh)
 ```bash
 # check the container runtime
 docker system info --format "{{ .Runtimes }}"
@@ -25,6 +25,7 @@ docker info -f '{{ .DockerRootDir}}'
 # containers resource usage
 docker stats [OPTIONS] [CONTAINER...]
 ```
+* Check qemu [here](https://docs.docker.com/build/drivers/docker-container/#qemu)
 ---
 
 * Docker building and shipping images
