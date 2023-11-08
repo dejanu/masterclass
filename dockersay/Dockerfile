@@ -8,6 +8,8 @@ RUN apt-get update && apt-get install -y cowsay --no-install-recommends && rm -r
 ENV PATH $PATH:/usr/games
 COPY docker.cow /usr/share/cowsay/cows/
 RUN ln -sv /usr/share/cowsay/cows/docker.cow /usr/share/cowsay/cows/default.cow
-# CMD ["cowsay","Hello World!"]
+
+#CMD ["cowsay", "Hello World!"]
+
 ENTRYPOINT ["cowsay"]
 CMD ["Hello World!"]
