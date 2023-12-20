@@ -1,4 +1,4 @@
-## Apps
+## Demo
 
 ```bash
 # 2 apps
@@ -17,6 +17,9 @@ kubectl expose deployment goapp --name=goapp-svc --port=8082 --target-port=8888
 kubectl  run curlopenssl -i --tty --image=dejanualex/curlopenssl:1.0  -- sh
 curl pythonapp-svc.default.svc.cluster.local:8081
 curl goapp-svc.default.svc.cluster.local:8082
+
+# install ingress controller
+kubectl apply -f ingress_controller_for_apps.yaml
 ```
 
 ## Services
