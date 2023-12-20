@@ -79,14 +79,11 @@ docker push localhost:5000/demoalpine
 # retag and push image and just check from browser ;)
 http://127.0.0.1:5000/v2/_catalog
 ```
-
 ## Dockerfile
 
 * `Dockerfile` contains instructions that are used to build Docker images, reference [here](https://docs.docker.com/engine/reference/builder/)
 
 * Try a linter like [hadolint](https://github.com/hadolint/hadolint) if you don't like manual stuff: `docker run --rm -i hadolint/hadolint < Dockerfile`
-
-
 ## Links and repositories
 
 * CaaS for boilerplate [here](https://github.com/dejanu/CaaS)
