@@ -88,3 +88,11 @@ http://127.0.0.1:5000/v2/_catalog
 
 * CaaS for boilerplate [here](https://github.com/dejanu/CaaS)
 * Dockerhub [here](https://hub.docker.com/u/dejanualex)
+
+## Official docs:
+
+* [kubectl getting started](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#-strong-getting-started-strong-)
+* [kubectl cheat sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+
+https://kubernetes.io/training/
+https://kubernetes.io/docs/reference/
