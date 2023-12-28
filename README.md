@@ -91,7 +91,7 @@ http://127.0.0.1:5000/v2/_catalog
 
 * Try a linter like [hadolint](https://github.com/hadolint/hadolint) if you don't like manual stuff: `docker run --rm -i hadolint/hadolint < Dockerfile`
 
-## Docker image:
+## Docker images:
 
 * Docker Official Images are a curated set of Docker open source and drop-in solution repositories.
 
@@ -99,6 +99,13 @@ http://127.0.0.1:5000/v2/_catalog
 
 ```bash
 docker search --format "{{.Name}}: {{.StarCount}}: {{.IsOfficial}}" <imagename>
+docker search --format "table {{.Name}}\t{{.StarCount}}\t{{.IsOfficial}}"
+```
+
+* Docker manifests describe an image’s layers and the architectures it supports, manifest schema [here](https://docs.docker.com/)registry/spec/manifest-v2-2/
+```bash
+# manifest command interacts solely with a Docker registry.
+docker manifest inspect maven
 ```
 
 ## Links and repositories
