@@ -1,5 +1,6 @@
 ### Best-practices
 
+* Base images should not use the `latest` tag.
 
 * DL3025 warning: Use arguments JSON notation for [CMD](https://docs.docker.com/engine/reference/builder/#cmd) and ENTRYPOINT arguments
 ```Dockerfile

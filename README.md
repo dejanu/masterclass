@@ -25,10 +25,16 @@ docker info -f '{{ .DockerRootDir}}'
 # containers resource usage
 docker stats [OPTIONS] [CONTAINER...]
 ```
+
+* Container are unix processes not "lightweight VMs" (we package the app and its dependencies)
+
+* Docker is just a fancy way to run a process, NOT a VM
+
 * Check qemu [here](https://docs.docker.com/build/drivers/docker-container/#qemu)
+
 ---
 
-* Docker building and shipping images
+* Docker building and shipping images + [oci image-spec](https://github.com/opencontainers/distribution-spec/blob/main/spec.md)
 
     - Container = segregated user-space environments for running applications isolated from other applications sharing the same host OS.
 
