@@ -90,6 +90,17 @@ http://127.0.0.1:5000/v2/_catalog
 * `Dockerfile` contains instructions that are used to build Docker images, reference [here](https://docs.docker.com/engine/reference/builder/)
 
 * Try a linter like [hadolint](https://github.com/hadolint/hadolint) if you don't like manual stuff: `docker run --rm -i hadolint/hadolint < Dockerfile`
+
+## Docker image:
+
+* Docker Official Images are a curated set of Docker open source and drop-in solution repositories.
+
+* Why [Official Images](https://github.com/docker-library/official-images) ? These images have clear documentation, promote best practices, and are designed for the most common use cases 
+
+```bash
+docker search --format "{{.Name}}: {{.StarCount}}: {{.IsOfficial}}" <imagename>
+```
+
 ## Links and repositories
 
 * CaaS for boilerplate [here](https://github.com/dejanu/CaaS)
