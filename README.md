@@ -99,13 +99,13 @@ http://127.0.0.1:5000/v2/_catalog
 
 ```bash
 docker search --format "{{.Name}}: {{.StarCount}}: {{.IsOfficial}}" <imagename>
-docker search --format "table {{.Name}}\t{{.StarCount}}\t{{.IsOfficial}}"
+docker search --format "table {{.Name}}\t{{.StarCount}}\t{{.IsOfficial}}" <imagename>
 ```
 
-* Docker manifests describe an image’s layers and the architectures it supports, manifest schema [here](https://docs.docker.com/)registry/spec/manifest-v2-2/
+* Docker manifests describe an image’s layers and the architectures it supports, manifest schema [here](https://docs.docker.com/)registry/spec/manifest-v2-2/)
 ```bash
 # manifest command interacts solely with a Docker registry.
-docker manifest inspect maven
+docker manifest inspect <manifest_file>
 ```
 
 ## Links and repositories
